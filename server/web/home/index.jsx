@@ -14,18 +14,16 @@ var Component = React.createClass({
                 activeTab="home">
 
                 <div className="jumbotron">
-                    <h1>Success</h1>
+                    <h1>Space Opera</h1>
                     <p className="lead">
-                        Your Node.js website and user system is running. May
-                        the force be with you.
-
+                        A collaborative online storytelling game in the electrosonic flow.
                         <div>
                             <a className="btn btn-primary btn-lg" href="/signup">
-                                Create an account
+                                Enter the Fray
                             </a>
                             &nbsp; or &nbsp;
                             <a className="btn btn-warning btn-lg" href="/login/forgot">
-                                Reset your password
+                                Host a Game
                             </a>
                         </div>
                     </p>
@@ -34,14 +32,13 @@ var Component = React.createClass({
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
-                                <h3>About us</h3>
+                                <h3>News</h3>
                                 <p>
-                                    At vero eos et accusamus et iusto odio
-                                    dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    This month in the nebulon galaxy, genocide is feared by many.
+                                    Will the galactic council intervene to keep the Vampires of Obturon
+                                    from absorbing the entire world of the Strumps?
                                 </p>
-                                <a href="/about" className="btn btn-default btn-block">
+                                <a href="/news" className="btn btn-default btn-block">
                                     Learn more
                                 </a>
                             </div>
@@ -50,14 +47,14 @@ var Component = React.createClass({
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
-                                <h3>Sign up</h3>
+                                <h3>Galaxy Map</h3>
                                 <p>
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque
                                     corrupti.
                                 </p>
-                                <a href="/signup" className="btn btn-default btn-block">
+                                <a href="/galaxy" className="btn btn-default btn-block">
                                     Learn more
                                 </a>
                             </div>
@@ -66,14 +63,30 @@ var Component = React.createClass({
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
-                                <h3>Contact us</h3>
+                                <h3>Solar Map</h3>
                                 <p>
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque
                                     corrupti.
                                 </p>
-                                <a href="/contact" className="btn btn-default btn-block">
+                                <a href="/system" className="btn btn-default btn-block">
+                                    Learn more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="panel panel-default">
+                            <div className="panel-body">
+                                <h3>Planetary Map</h3>
+                                <p>
+                                    At vero eos et accusamus et iusto odio
+                                    dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque
+                                    corrupti.
+                                </p>
+                                <a href="/planet" className="btn btn-default btn-block">
                                     Learn more
                                 </a>
                             </div>

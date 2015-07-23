@@ -26,7 +26,7 @@ var Component = React.createClass({
                     <div className="footer">
                         <div className="container">
                             <span className="copyright pull-right">
-                                &copy; 2014 Acme, Inc.
+                                &copy; 2015 Turnstyles, Inc.
                             </span>
                             <ul className="links">
                                 <li><a href="/">Home</a></li>
