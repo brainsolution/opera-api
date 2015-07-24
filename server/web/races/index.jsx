@@ -70,9 +70,14 @@ var Component = React.createClass({
                         <p className="lead">
                             Hyper-expansionist
                         </p>
-                        <img src="public/media/robots/robot3.png" class="img-responsive"/>
+                        <p>
+                            <img src="public/media/robots/robot3.png" class="img-responsive"/>
+                        </p>
                     </div>
                 </div>
+                <a className="btn btn-primary btn-lg pull-right" href="/races">
+                    Create A Race
+                </a>
             </Layout>
         );
     }
