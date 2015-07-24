@@ -18,7 +18,7 @@ var Component = React.createClass({
                         <a className="navbar-brand" href="/">
                             <img
                                 className="navbar-logo"
-                                src="/public/media/atom_icon.png"
+                                src="/public/media/spaceopera.svg"
                             />
                             <span className="navbar-brand-label">Space Opera</span>
                         </a>
@@ -27,9 +27,6 @@ var Component = React.createClass({
                         <ul className="nav navbar-nav">
                             <li className={this.tabClass('home')}>
                                 <a href="/">Home</a>
-                            </li>
-                            <li className={this.tabClass('map')}>
-                                <a href="/">map</a>
                             </li>
                             <li className={this.tabClass('about')}>
                                 <a href="/about">About</a>
