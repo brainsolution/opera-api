@@ -7,7 +7,7 @@ var Component = React.createClass({
 
         return (
             <Layout
-                title="About us"
+                title="About Us"
                 activeTab="about">
 
                 <div className="row">
@@ -66,9 +66,9 @@ var Component = React.createClass({
                         </div>
                     </div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Prestige worldwide</h1>
+                        <h1 className="page-header">Space Opera</h1>
                         <p className="lead">
-                            The first name in entertainment.
+                            Don't escape reality, generate alternatives.
                         </p>
                         <i className="fa fa-volume-up bamf"></i>
                     </div>

@@ -18,15 +18,18 @@ var Component = React.createClass({
                         <a className="navbar-brand" href="/">
                             <img
                                 className="navbar-logo"
-                                src="/public/media/logo-square.png"
+                                src="/public/media/atom_icon.png"
                             />
-                            <span className="navbar-brand-label">Aqua</span>
+                            <span className="navbar-brand-label">Space Opera</span>
                         </a>
                     </div>
                     <div className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
                             <li className={this.tabClass('home')}>
                                 <a href="/">Home</a>
+                            </li>
+                            <li className={this.tabClass('map')}>
+                                <a href="/">map</a>
                             </li>
                             <li className={this.tabClass('about')}>
                                 <a href="/about">About</a>
