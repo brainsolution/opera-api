@@ -12,7 +12,10 @@ var Component = React.createClass({
 
                 <div className="row">
                     <div className="col-sm-6">
-                        <h1 className="page-header">About us</h1>
+                        <h1 className="page-header">About Turnstyles Inc.</h1>
+                        <p className="lead">
+                            Turnstyles is focused on creating games that follow particular game design principles.
+                        </p>
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
@@ -20,13 +23,15 @@ var Component = React.createClass({
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">Leo Damon</h4>
+                                <h4 className="media-heading">Non Realtime</h4>
                                 <p>
-                                    Cras sit amet nibh libero, in gravida
-                                    nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin commodo. Cras purus odio,
-                                    vestibulum in vulputate at, tempus viverra
-                                    turpis.
+                                    No need to coordinate large blocks of time to play with your friends.
+                                    Have kids? No problem. Have a life? Enjoy your life and play a game too
+                                    in the little blocks of time which you can manage at your own convenience.
+                                    Spend more or less time as you have it available.
+
+                                    We try to design games that you can think about all day,
+                                    but which you can play in about 15 minutes a day before or after work.
                                 </p>
                             </div>
                         </div>
@@ -37,13 +42,11 @@ var Component = React.createClass({
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">Mathew DiCaprio</h4>
+                                <h4 className="media-heading">Story Based</h4>
                                 <p>
-                                    Cras sit amet nibh libero, in gravida
-                                    nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin commodo. Cras purus odio,
-                                    vestibulum in vulputate at, tempus viverra
-                                    turpis.
+                                    No grinding mechanics like stacking boxes or killing rats to "level up".
+                                    Simple mechanics that respect your time and focus on creating a story with others.
+                                    Mysteries abound. Colaborate or Compete, but the result should be a tale worth telling.
                                 </p>
                             </div>
                         </div>
@@ -54,23 +57,34 @@ var Component = React.createClass({
                                 </div>
                             </div>
                             <div className="media-body">
-                                <h4 className="media-heading">Nick Jackson</h4>
+                                <h4 className="media-heading">Creative Output</h4>
                                 <p>
-                                    Cras sit amet nibh libero, in gravida
-                                    nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin commodo. Cras purus odio,
-                                    vestibulum in vulputate at, tempus viverra
-                                    turpis.
+                                    Publish the results of your stories in little chapbooks.
+                                    In a world where everyone wants you to store your stuff
+                                    on their hard drives so they can monetize you forever,
+                                    We'd like you to have a physical art object at the end of the day.
+                                    One that doesn't cost you a monthly fee to retain.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Space Opera</h1>
-                        <p className="lead">
-                            Don't escape reality, generate alternatives.
-                        </p>
-                        <i className="fa fa-volume-up bamf"></i>
+                        <h1 className="page-header">About Space Opera</h1>
+                        <img src="public/media/ship.gif" class="img-responsive"/>
+
+                        <div className="media-body">
+                            <p className="lead text-left">
+                                Don't escape reality,<br />generate alternatives... with "Space Opera"
+                            </p>
+                            <p>
+                                Space Opera is the first Turnstyles game and it's design is more traditional than
+                                some of the games that we would like to create in order to err on the side of caution.
+                            </p>
+                            <p>
+                                A mixture of favorite elements from Stars! and Cruenti Dei, it's a space exploration
+                                game with traditional, but simple mechanics, and a focus on player diplomacy and story.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </Layout>
