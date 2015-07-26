@@ -68,7 +68,7 @@ var Component = React.createClass({
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm-6 text-center">
+                    <div className="col-sm-6 text-left">
                         <h1 className="page-header">About Space Opera</h1>
                         <img src="public/media/ship.gif" class="img-responsive"/>
 
