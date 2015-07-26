@@ -77,12 +77,9 @@ var Component = React.createClass({
                                 Don't escape reality,<br />generate alternatives... with "Space Opera"
                             </p>
                             <p>
-                                Space Opera is the first Turnstyles game and it's design is more traditional than
-                                some of the games that we would like to create in order to err on the side of caution.
-                            </p>
-                            <p>
-                                A mixture of favorite elements from Stars! and Cruenti Dei, it's a space exploration
-                                game with traditional, but simple mechanics, and a focus on player diplomacy and story.
+                                A mixture of favorite elements from Stars! and Cruenti Dei, Space Opera is
+                                a space exploration game with traditional, but simple, mechanics
+                                and a focus on player diplomacy and story.
                             </p>
                         </div>
                     </div>
