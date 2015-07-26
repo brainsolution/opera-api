@@ -16,7 +16,7 @@ var Component = React.createClass({
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <img src="public/media/alien1.svg" class="img-responsive"/>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -33,7 +33,7 @@ var Component = React.createClass({
                         <div className="media text-right">
                             <div className="pull-right">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <img src="public/media/alien2.svg" class="img-responsive"/>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -50,7 +50,7 @@ var Component = React.createClass({
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <img src="public/media/alien3.svg" class="img-responsive"/>
                                 </div>
                             </div>
                             <div className="media-body">

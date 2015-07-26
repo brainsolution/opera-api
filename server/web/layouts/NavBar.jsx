@@ -18,7 +18,7 @@ var Component = React.createClass({
                         <a className="navbar-brand" href="/">
                             <img
                                 className="navbar-logo"
-                                src="/public/media/atom_icon.png"
+                                src="/public/media/ringed_planet.svg"
                             />
                             <span className="navbar-brand-label">Space Opera</span>
                         </a>
