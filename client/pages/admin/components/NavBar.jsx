@@ -41,15 +41,15 @@ var Component = React.createClass({
         });
 
         return (
-            <div className="navbar navbar-inverse navbar-fixed-top">
+            <div className="navbar navbar-fixed-top">
                 <div className="container">
                     <div className="navbar-header">
                         <Link className="navbar-brand" to="home">
                             <img
                                 className="navbar-logo"
-                                src="/public/media/logo-square-inverse.png"
+                                src="/public/media/ringed_planet.svg"
                             />
-                            <span className="navbar-brand-label">Aqua</span>
+                            <span className="navbar-brand-label">Space Opera</span>
                         </Link>
                         <button
                             className="navbar-toggle collapsed"
