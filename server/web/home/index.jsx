@@ -9,7 +9,7 @@ var Component = React.createClass({
 
         return (
             <Layout
-                title="Aqua"
+                title="Space Opera"
                 neck={neck}
                 activeTab="home">
 
