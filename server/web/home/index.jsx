@@ -18,13 +18,7 @@ var Component = React.createClass({
                     <p className="lead">
                         A collaborative online storytelling game in the electrosonic flow.
                         <div>
-                            <a className="btn btn-primary btn-lg" href="/signup">
-                                Enter the Fray
-                            </a>
-                            &nbsp; or &nbsp;
-                            <a className="btn btn-warning btn-lg" href="/login/forgot">
-                                Host a Game
-                            </a>
+                            <img src="public/media/scapemin2.png" class="img-responsive" width="800"/>
                         </div>
                     </p>
                 </div>
