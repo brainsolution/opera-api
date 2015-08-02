@@ -69,6 +69,7 @@ var manifest = {
         './server/web/galaxy': {},
         './server/web/system': {},
         './server/web/planet': {},
+        './server/web/terrain': {},
         './server/web/races': {},
         './server/web/account': {},
         './server/web/admin': {},

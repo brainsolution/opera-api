@@ -70,6 +70,8 @@ var Component = React.createClass({
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="row">
                     <div className="col-sm-4">
                         <div className="panel panel-default">
                             <div className="panel-body">
@@ -81,6 +83,22 @@ var Component = React.createClass({
                                     corrupti.
                                 </p>
                                 <a href="/planet" className="btn btn-default btn-block">
+                                    Learn more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="panel panel-default">
+                            <div className="panel-body">
+                                <h3>Terrain Map</h3>
+                                <p>
+                                    At vero eos et accusamus et iusto odio
+                                    dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque
+                                    corrupti.
+                                </p>
+                                <a href="/terrain" className="btn btn-default btn-block">
                                     Learn more
                                 </a>
                             </div>

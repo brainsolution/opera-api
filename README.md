@@ -228,3 +228,6 @@ MIT
 ## Don't forget
 
 What you build with Aqua is more important than Aqua.
+
+## if the mongo file lock gets stuck don
+sudo chown -R `id -u` /data/db
