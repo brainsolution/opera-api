@@ -18,8 +18,9 @@ var Component = React.createClass({
                     <p className="lead">
                         A collaborative online storytelling game in the electrosonic flow.
                         <div>
-                            <img src="public/media/scapemin2.png" class="img-responsive" width="800"/>
+                            <img src="public/media/scapemin2.png" className="img-responsive" width="100%"/>
                         </div>
+                        <span>Splash animation with SVG and Greensock</span>
                     </p>
                 </div>
                 <div className="row">
@@ -30,7 +31,7 @@ var Component = React.createClass({
                                 <p>
                                     This month in the nebulon galaxy, genocide is feared by many.
                                     Will the galactic council intervene to keep the Vampires of Obturon
-                                    from absorbing the entire world of the Strumps?
+                                    from absorbing the entire world of the Strumps? [Characters in SVG].
                                 </p>
                                 <a href="/news" className="btn btn-default btn-block">
                                     Learn more
@@ -43,10 +44,9 @@ var Component = React.createClass({
                             <div className="panel-body">
                                 <h3>Galaxy Map</h3>
                                 <p>
-                                    At vero eos et accusamus et iusto odio
-                                    dignissimos ducimus qui blanditiis
-                                    praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    Heavily garbled and hard to decipher messages stream from the outer rim
+                                    Warnings of something? An invitation? What mysteries await beyond the pale.
+                                    [Flat pointmap with infographic overlays in d3].
                                 </p>
                                 <a href="/galaxy" className="btn btn-default btn-block">
                                     Learn more
@@ -62,7 +62,7 @@ var Component = React.createClass({
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    corrupti. [Solar system in ThreeJs]
                                 </p>
                                 <a href="/system" className="btn btn-default btn-block">
                                     Learn more
@@ -80,7 +80,7 @@ var Component = React.createClass({
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    corrupti. [Leaflet with a custom basemap]
                                 </p>
                                 <a href="/planet" className="btn btn-default btn-block">
                                     Learn more
@@ -96,7 +96,7 @@ var Component = React.createClass({
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    corrupti. [Raphaelesque Hexmap]
                                 </p>
                                 <a href="/terrain" className="btn btn-default btn-block">
                                     Learn more
@@ -112,7 +112,7 @@ var Component = React.createClass({
                                     At vero eos et accusamus et iusto odio
                                     dignissimos ducimus qui blanditiis
                                     praesentium voluptatum deleniti atque
-                                    corrupti.
+                                    corrupti. [Alien and Robot Creation with SVG]
                                 </p>
                                 <a href="/races" className="btn btn-default btn-block">
                                     Learn more

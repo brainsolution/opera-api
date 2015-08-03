@@ -66,11 +66,18 @@ var Component = React.createClass({
                         </div>
                     </div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Prestige worldwide</h1>
+                        <h1 className="page-header">Animated Robot Theater</h1>
                         <p className="lead">
-                            The first name in entertainment.
+                            ART by Code Crush Cartoonies.
                         </p>
-                        <i className="fa fa-volume-up bamf"></i>
+                        <div className="row">
+                            <div className="col-sm-8 text-center">
+                                <img src="public/media/robots/robot.svg" className="img-responsive"/>
+                            </div>
+                            <div className="col-sm-4 text-center">
+                                <img src="public/media/robots/rob.svg" className="img-responsive"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Layout>
