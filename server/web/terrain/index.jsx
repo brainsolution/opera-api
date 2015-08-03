@@ -11,7 +11,7 @@ var Component = React.createClass({
                 activeTab="terrain">
 
                 <div className="row">
-                    <img src="public/media/terrain.png" class="img-responsive" width="1200"/>
+                    <img src="public/media/terrain.png" className="img-responsive" width="100%"/>
                 </div>
             </Layout>
         );
