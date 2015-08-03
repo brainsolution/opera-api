@@ -19,7 +19,7 @@ var Component = React.createClass({
                         <h1 className="page-header">Don't Escape Reality</h1>
                         <p className="lead">
                             Generate Alternatives! With Space Opera!
-                            <img src="public/media/robots/Untitled 6.png" className="img-responsive" width="50%"/>
+                            <img src="public/media/robots/Untitled 6.png" className="img-responsive center-block" width="50%"/>
                         </p>
                     </div>
                 </div>

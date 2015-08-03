@@ -19,7 +19,7 @@ var Component = React.createClass({
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <i className="fa fa-calendar fa-4x"></i>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -38,7 +38,7 @@ var Component = React.createClass({
                         <div className="media text-right">
                             <div className="pull-right">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <i className="fa fa-user-secret fa-4x"></i>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -53,7 +53,7 @@ var Component = React.createClass({
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <i className="fa fa-camera-retro fa-4x"></i>
+                                    <i className="fa fa-leanpub fa-4x"></i>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -70,7 +70,7 @@ var Component = React.createClass({
                     </div>
                     <div className="col-sm-6 text-left">
                         <h1 className="page-header">About Space Opera</h1>
-                        <img src="public/media/ship.gif" class="img-responsive"/>
+                        <img src="public/media/ship.gif" class="img-responsive center-block"/>
 
                         <div className="media-body">
                             <p className="lead text-left">

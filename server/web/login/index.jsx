@@ -19,7 +19,7 @@ var Component = React.createClass({
                         <h1 className="page-header">Tune In Today</h1>
                         <p className="lead">
                             The passions of poet heros await!
-                            <img src="public/media/robo_guy.svg" className="img-responsive" width="30%"/>
+                            <img src="public/media/robo_guy.svg" className="img-responsive center-block" width="30%"/>
                         </p>
                     </div>
                 </div>

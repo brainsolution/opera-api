@@ -20,7 +20,7 @@ var Component = React.createClass({
                         <p className="lead">
                             - A time to think and a time to act.
                         </p>
-                        <img src="public/media/robots/Untitled 7.png" className="img-responsive" width="50%"/>
+                        <img src="public/media/robots/Untitled 7.png" className="img-responsive center-block" width="50%"/>
                         <div>
                             889 Warren Street &bull; Albany, NY 12208
                         </div>
