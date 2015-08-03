@@ -15,6 +15,13 @@ var Component = React.createClass({
 
                 <div className="row">
                     <div className="col-sm-6" id="app-mount"></div>
+                    <div className="col-sm-6 text-center">
+                        <h1 className="page-header">Tune In Today</h1>
+                        <p className="lead">
+                            The passions of poet heros await!
+                            <img src="public/media/robo_guy.svg" className="img-responsive" width="30%"/>
+                        </p>
+                    </div>
                 </div>
             </Layout>
         );

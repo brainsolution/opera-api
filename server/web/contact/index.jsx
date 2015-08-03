@@ -16,13 +16,13 @@ var Component = React.createClass({
                 <div className="row">
                     <div className="col-sm-6" id="app-mount"></div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Contact us</h1>
+                        <h1 className="page-header">Turnstyles Inc.</h1>
                         <p className="lead">
-                            Freddy can't wait to hear from you.
+                            - A time to think and a time to act.
                         </p>
-                        <i className="fa fa-reply-all bamf"></i>
+                        <img src="public/media/robots/Untitled 7.png" className="img-responsive" width="50%"/>
                         <div>
-                            1428 Elm Street &bull; San Francisco, CA 94122
+                            889 Warren Street &bull; Albany, NY 12208
                         </div>
                     </div>
                 </div>

@@ -16,11 +16,11 @@ var Component = React.createClass({
                 <div className="row">
                     <div className="col-sm-6" id="app-mount"></div>
                     <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Campy benefits</h1>
+                        <h1 className="page-header">Don't Escape Reality</h1>
                         <p className="lead">
-                            Really, you will love it inside. It's super great!
+                            Generate Alternatives! With Space Opera!
+                            <img src="public/media/robots/Untitled 6.png" className="img-responsive" width="50%"/>
                         </p>
-                        <i className="fa fa-thumbs-o-up bamf"></i>
                     </div>
                 </div>
             </Layout>
