@@ -70,13 +70,8 @@ var Component = React.createClass({
                         <p className="lead">
                             ART by Code Crush Cartoonies.
                         </p>
-                        <div className="row">
-                            <div className="col-sm-8 text-center">
-                                <img src="public/media/robots/robot.svg" className="img-responsive"/>
-                            </div>
-                            <div className="col-sm-4 text-center">
-                                <img src="public/media/robots/rob.svg" className="img-responsive"/>
-                            </div>
+                        <div className="row block-center">
+                            <img src="public/media/robots/threerobs.svg" className="img-responsive"/>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,34 @@
-var CommentBox = React.createClass({displayName: 'CommentBox',
-    render: function() {
-        return (
-            React.createElement('div', {className: "commentBox"},
-                "Hello, world! I am a CommentBox."
-            )
-        );
+/* global window */
+var React = require('react/addons');
+var ReactRouter = require('react-router');
+var Routes = require('./Routes');
+
+
+var HistoryLocation = ReactRouter.HistoryLocation;
+
+
+var App = {
+    blastoff: function () {
+
+        var self = this;
+
+        ReactRouter.run(Routes, HistoryLocation, function (Handler) {
+
+            self.mainElement = React.render(
+                <Handler />,
+                window.document.getElementById('app-mount')
+            );
+        });
     }
-});
-React.render(
-    React.createElement(CommentBox, null),
-    document.getElementById('content')
-);
+};
+
+
+module.exports = App;
+
+
+/* $lab:coverage:off$ */
+if (!module.parent) {
+    window.app = App;
+    App.blastoff();
+}
+/* $lab:coverage:on$ */

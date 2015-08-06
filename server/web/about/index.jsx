@@ -70,13 +70,10 @@ var Component = React.createClass({
                     </div>
                     <div className="col-sm-6 text-left">
                         <h1 className="page-header">About Space Opera</h1>
-                        <img src="public/media/ship.gif" class="img-responsive center-block"/>
+                        <img src="public/media/ship.gif" className="img-responsive center-block"/>
 
                         <div className="media-body">
                             <p className="lead text-left">
-                                Don't escape reality,<br />generate alternatives... with "Space Opera"
-                            </p>
-                            <p>
                                 A mixture of favorite elements from Stars! and Cruenti Dei, Space Opera is
                                 a space exploration game with traditional, but simple, mechanics
                                 and a focus on player diplomacy and story.

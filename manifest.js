@@ -8,7 +8,7 @@ var criteria = {
 
 
 var manifest = {
-    $meta: 'This file defines the plot device.',
+    $meta: 'This file defines the manifest.',
     server: {
         debug: {
             request: ['error']
