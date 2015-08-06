@@ -12,25 +12,6 @@ var dispatch = Dispatcher.handleAction;
 
 
 var Actions = {
-    forgot: function (data) {
-
-        dispatch(VIEW_ACTION, Types.FORGOT, data);
-
-        var request = {
-            method: 'POST',
-            url: '/api/planet/forgot',
-            data: data
-        };
-
-        Fetch(request, function (err, response) {
-
-            if (!err) {
-                response.success = true;
-            }
-
-            dispatch(SERVER_ACTION, Types.FORGOT_RESPONSE, response);
-        });
-    },
     login: function (data) {
 
         dispatch(VIEW_ACTION, Types.LOGIN, data);
@@ -84,25 +65,6 @@ var Actions = {
             }
 
             dispatch(SERVER_ACTION, Types.LOGOUT_RESPONSE, response);
-        });
-    },
-    reset: function (data) {
-
-        dispatch(VIEW_ACTION, Types.RESET, data);
-
-        var request = {
-            method: 'POST',
-            url: '/api/login/reset',
-            data: data
-        };
-
-        Fetch(request, function (err, response) {
-
-            if (!err) {
-                response.success = true;
-            }
-
-            dispatch(SERVER_ACTION, Types.RESET_RESPONSE, response);
         });
     }
 };

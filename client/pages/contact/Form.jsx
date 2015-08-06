@@ -58,7 +58,7 @@ var Component = React.createClass({
             formElements = <fieldset>
                 <TextControl
                     name="name"
-                    label="Your name"
+                    label="Your Prostitute Name"
                     ref="nameControl"
                     hasError={this.state.hasError.name}
                     valueLink={this.linkState('name')}
@@ -88,7 +88,7 @@ var Component = React.createClass({
                         inputClasses={{ 'btn-primary': true }}
                         disabled={this.state.loading}>
 
-                        Send message
+                        Go Go Gadget
                         <Spinner space="left" show={this.state.loading} />
                     </Button>
                 </ControlGroup>
@@ -97,7 +97,7 @@ var Component = React.createClass({
 
         return (
             <section>
-                <h1 className="page-header">Send a message</h1>
+                <h1 className="page-header">Dear Inspector Gadget</h1>
                 <form onSubmit={this.handleSubmit}>
                     {alerts}
                     {formElements}

@@ -94,7 +94,7 @@ var Component = React.createClass({
 
         return (
             <section>
-                <h1 className="page-header">Sign in</h1>
+                <h1 className="page-header">Sign in yo</h1>
                 <form onSubmit={this.handleSubmit}>
                     {alerts}
                     {formElements}
