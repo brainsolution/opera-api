@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb00535... add an svg
 var React = require('react/addons');
 var ObjectAssign = require('object-assign');
 var ClassNames = require('classnames');
