@@ -16,7 +16,7 @@ var Component = React.createClass({
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <img src="public/media/alien1.svg" class="img-responsive"/>
+                                    <img src="public/media/alien1.svg" className="img-responsive"/>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -33,7 +33,7 @@ var Component = React.createClass({
                         <div className="media text-right">
                             <div className="pull-right">
                                 <div className="media-object">
-                                    <img src="public/media/alien2.svg" class="img-responsive"/>
+                                    <img src="public/media/alien2.svg" className="img-responsive"/>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -50,7 +50,7 @@ var Component = React.createClass({
                         <div className="media">
                             <div className="pull-left">
                                 <div className="media-object">
-                                    <img src="public/media/alien3.svg" class="img-responsive"/>
+                                    <img src="public/media/alien3.svg" className="img-responsive"/>
                                 </div>
                             </div>
                             <div className="media-body">
@@ -70,7 +70,7 @@ var Component = React.createClass({
                         <p className="lead">
                             Hyper-expansionist
                         </p>
-                        <img src="public/media/robots/robot3.png" class="img-responsive center-block"/>
+                        <img src="public/media/robots/robot3.png" className="img-responsive center-block"/>
                     </div>
                 </div>
                 <a className="btn btn-primary btn-lg pull-right" href="/races">
