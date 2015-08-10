@@ -2,7 +2,6 @@ var React = require('react/addons');
 var ReactRouter = require('react-router');
 var App = require('./components/App');
 var Home = require('./components/Home');
-var Logout = require('./components/Logout');
 
 
 var Route = ReactRouter.Route;
@@ -13,8 +12,6 @@ var NotFoundRoute = ReactRouter.NotFoundRoute;
 var Routes = (
     <Route path="/planet" name="app" handler={App}>
         <DefaultRoute name="home" handler={Home} />
-
-        <Route path="logout" name="logout" handler={Logout} />
     </Route>
 );
 
