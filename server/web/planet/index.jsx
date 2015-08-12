@@ -12,8 +12,6 @@ var Component = React.createClass({
         return (
             <Layout
                 title="Planet Map"
-                tweenMax={tweenMax}
-                timeLineMax={timeLineMax}
                 feet={feet}
                 activeTab="planet">
 

@@ -1,4 +1,3 @@
-
 var React = require('react/addons');
 var ObjectAssign = require('object-assign');
 var ClassNames = require('classnames');
@@ -24,7 +23,7 @@ var View = React.createClass({
             <div>
                 <div className={"planet"}>
                     <svg>
-                        <g>
+                        <g >
                             <path fill="#FFFFFF" d="M39.937,18.617c-1.596,2.371-6.328,2.139-9.078,0.908C25.443,10.201,42.684,6.3,39.937,18.617z
 	 M33.582,14.078c-0.258,2.375,0.33,3.908,2.723,3.631c0.05-1.16,1.165-1.26,0.906-2.723C35.983,14.698,35.481,13.694,33.582,14.078z
 	"/>
@@ -85,6 +84,5 @@ var View = React.createClass({
         )
     }
 });
-
 
 module.exports = View;
