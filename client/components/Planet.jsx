@@ -4,8 +4,8 @@ var ObjectAssign = require('object-assign');
 var ClassNames = require('classnames');
 
 var View = React.createClass({
-    getDefaultProps: function () {
 
+    getDefaultProps: function () {
         return {
             type: 'planet'
         };
@@ -18,12 +18,11 @@ var View = React.createClass({
     handleMouseDown() {
         this.setState({open: !this.state.open});
     },
+
     render: function () {
         return (
             <div>
-                <div className={"planet"}>Yarigo</div>
-                <div>
-
+                <div className={"planet"}>
                     <svg>
                         <g>
                             <path fill="#FFFFFF" d="M39.937,18.617c-1.596,2.371-6.328,2.139-9.078,0.908C25.443,10.201,42.684,6.3,39.937,18.617z
@@ -81,7 +80,6 @@ var View = React.createClass({
                         </g>
                     </svg>
                     <button onMouseDown={this.handleMouseDown}>Toggle</button>
-
                 </div>
             </div>
         )
