@@ -19,6 +19,11 @@ var Component = React.createClass({
         var bottom = this.refs.bottom.getDOMNode();
         var left = this.refs.left.getDOMNode();
 
+        var top2 = this.refs.top2.getDOMNode();
+        var right2 = this.refs.right2.getDOMNode();
+        var bottom2 = this.refs.bottom2.getDOMNode();
+        var left2 = this.refs.left2.getDOMNode();
+
         var goRandom1 = Math.random()*200;
         var goRandom2 = Math.random()*200;
         var goRandom3 = Math.random()*200;
@@ -29,6 +34,12 @@ var Component = React.createClass({
             .to(right, .5, {x:"+="+goRandom2})
             .to(bottom, .5, {y:"+="+goRandom3})
             .to(left, .5, {x:"-="+goRandom4});
+
+        var t2 = new TimelineMax({repeat:-1, yoyo:true});
+            t2.to(top2, .5, {y:"-="+goRandom4})
+            .to(right2, .5, {x:"+="+goRandom3})
+            .to(bottom2, .5, {y:"+="+goRandom2})
+            .to(left2, .5, {x:"-="+goRandom4});
 
     },
 
@@ -45,6 +56,10 @@ var Component = React.createClass({
                     <Planet ref="right"></Planet>
                     <Planet ref="bottom"></Planet>
                     <Planet ref="left"></Planet>
+                    <Planet ref="top2"></Planet>
+                    <Planet ref="right2"></Planet>
+                    <Planet ref="bottom2"></Planet>
+                    <Planet ref="left2"></Planet>
                 </div>
             </section>
         );
