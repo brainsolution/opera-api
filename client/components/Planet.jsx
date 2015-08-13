@@ -20,7 +20,6 @@ var View = React.createClass({
 
     render: function () {
         return (
-            <div>
                 <div className={"planet"}>
                     <svg>
                         <g >
@@ -78,9 +77,7 @@ var View = React.createClass({
 	C42.806,36.007,43.363,35.66,43.563,34.951z"/>
                         </g>
                     </svg>
-                    <button onMouseDown={this.handleMouseDown}>Toggle</button>
                 </div>
-            </div>
         )
     }
 });
