@@ -31,6 +31,7 @@
     "hapi-react-views": "^3.x.x",
     "hoek": "^2.x.x",
     "joi": "^6.x.x",
+    "leaflet": "^0.7.3",
     "lout": "^6.x.x",
     "mongodb": "^2.x.x",
     "node-uuid": "^1.x.x",
