@@ -16,7 +16,7 @@ var Navigation = ReactRouter.Navigation;
 var Component = React.createClass({
 
 	handleMouseDown() {
-		alert('ok');
+		alert('home:');
 	},
 
     componentDidMount: function() {
@@ -30,14 +30,14 @@ var Component = React.createClass({
         var bottom2 = this.refs.bottom2.getDOMNode();
         var left2 = this.refs.left2.getDOMNode();
 
-        var goRandom1 = Math.random()*200;
-        var goRandom2 = Math.random()*200;
-        var goRandom3 = Math.random()*200;
-        var goRandom4 = Math.random()*200;
-		var goRandom21 = Math.random()*200;
-		var goRandom22 = Math.random()*200;
-		var goRandom23 = Math.random()*200;
-		var goRandom24 = Math.random()*200;
+        var goRandom1 = Math.random()*400;
+        var goRandom2 = Math.random()*400;
+        var goRandom3 = Math.random()*400;
+        var goRandom4 = Math.random()*400;
+		var goRandom21 = Math.random()*400;
+		var goRandom22 = Math.random()*400;
+		var goRandom23 = Math.random()*400;
+		var goRandom24 = Math.random()*400;
 
         var t = new TimelineMax({repeat:-1, yoyo:true});
             t.to(top, .5, {y:"-="+goRandom1})
@@ -70,6 +70,7 @@ var Component = React.createClass({
                 </div>
 				<Button
 					type="submit"
+                    className={"righty"}
 					onClick={this.handleMouseDown}>
 					Oberon Four
 				</Button>
