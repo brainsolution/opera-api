@@ -4,6 +4,8 @@ var ControlGroup = require('../../../components/form/ControlGroup');
 var TextControl = require('../../../components/form/TextControl');
 var Button = require('../../../components/form/Button');
 var Planet = require('../../../components/Planet');
+var Alien = require('../../../components/Alien');
+var Hex = require('../../../components/Hex');
 var Spinner = require('../../../components/form/Spinner');
 var Actions = require('../Actions');
 var Gsap = require('gsap');
@@ -12,6 +14,10 @@ var Link = ReactRouter.Link;
 var Navigation = ReactRouter.Navigation;
 
 var Component = React.createClass({
+
+	handleMouseDown() {
+		alert('ok');
+	},
 
     componentDidMount: function() {
         var top = this.refs.top.getDOMNode();
@@ -28,6 +34,10 @@ var Component = React.createClass({
         var goRandom2 = Math.random()*200;
         var goRandom3 = Math.random()*200;
         var goRandom4 = Math.random()*200;
+		var goRandom21 = Math.random()*200;
+		var goRandom22 = Math.random()*200;
+		var goRandom23 = Math.random()*200;
+		var goRandom24 = Math.random()*200;
 
         var t = new TimelineMax({repeat:-1, yoyo:true});
             t.to(top, .5, {y:"-="+goRandom1})
@@ -36,10 +46,10 @@ var Component = React.createClass({
             .to(left, .5, {x:"-="+goRandom4});
 
         var t2 = new TimelineMax({repeat:-1, yoyo:true});
-            t2.to(top2, .5, {y:"-="+goRandom4})
-            .to(right2, .5, {x:"+="+goRandom3})
-            .to(bottom2, .5, {y:"+="+goRandom2})
-            .to(left2, .5, {x:"-="+goRandom4});
+            t2.to(top2, .5, {y:"-="+goRandom24})
+            .to(right2, .5, {x:"+="+goRandom23})
+            .to(bottom2, .5, {y:"+="+goRandom22})
+            .to(left2, .5, {x:"-="+goRandom21});
 
     },
 
@@ -47,20 +57,22 @@ var Component = React.createClass({
         return (
             <section>
                 <h1 className="page-header">Planet Map</h1>
-                <Button
-                    type="submit">
-                    Oberon Four
-                </Button>
+
                 <div className={"container"}>
-                    <Planet ref="top"></Planet>
+					<Hex ref="top2"></Hex>
+                    <Alien ref="top"></Alien>
                     <Planet ref="right"></Planet>
                     <Planet ref="bottom"></Planet>
                     <Planet ref="left"></Planet>
-                    <Planet ref="top2"></Planet>
                     <Planet ref="right2"></Planet>
                     <Planet ref="bottom2"></Planet>
-                    <Planet ref="left2"></Planet>
+                    <Hex ref="left2"></Hex>
                 </div>
+				<Button
+					type="submit"
+					onClick={this.handleMouseDown}>
+					Oberon Four
+				</Button>
             </section>
         );
     }
