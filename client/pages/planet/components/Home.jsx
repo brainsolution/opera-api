@@ -40,7 +40,7 @@ var Component = React.createClass({
 		var goRandom24 = Math.random()*400;
 
         var t = new TimelineMax({repeat:-1, yoyo:true});
-            t.to(top, .5, {y:"-="+goRandom1})
+            t.to(top, .5, {y:"+="+goRandom1})
             .to(right, .5, {x:"+="+goRandom2})
             .to(bottom, .5, {y:"+="+goRandom3})
             .to(left, .5, {x:"-="+goRandom4});
@@ -63,9 +63,9 @@ var Component = React.createClass({
                     <Alien ref="top"></Alien>
                     <Planet ref="right"></Planet>
                     <Planet ref="bottom"></Planet>
-                    <Planet ref="left"></Planet>
-                    <Planet ref="right2"></Planet>
-                    <Planet ref="bottom2"></Planet>
+                    <TextControl ref="left"></TextControl>
+                    <Alien ref="right2"></Alien>
+                    <TextControl ref="bottom2"></TextControl>
                     <Hex ref="left2"></Hex>
                 </div>
 				<Button
