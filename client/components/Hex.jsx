@@ -4,6 +4,10 @@ var ClassNames = require('classnames');
 
 var View = React.createClass({
 
+	propTypes:{
+		r: React.PropTypes.string.isRequired
+	},
+
     getDefaultProps: function () {
         return {
             type: 'hex'
@@ -11,7 +15,11 @@ var View = React.createClass({
     },
 
     getInitialState() {
-        return {fillCol: "#996633"};
+        return {
+			strokeW:2,
+			fillCol: "#eeeeee",
+			strokeCol: "#333333"
+		};
     },
 
     handleMouseDown() {
@@ -20,18 +28,50 @@ var View = React.createClass({
     },
 
     render: function () {
-        return (
+		var r = parseInt(this.props.r);
+
+		var cx = r;
+		var cy = Math.sqrt(3)/2 *r;
+
+		var x1 = r/2;
+		var y1 = 0;
+
+		var x2 = r + x1;
+		var y2 = 0;
+
+		var x3 = 2*r;
+		var y3 = cy;
+
+		var x4 = x2;
+		var y4 = cy*2;
+
+		var x5 = x1;
+		var y5 = cy*2;
+
+		var x6 = 0;
+		var y6 = cy;
+
+		var hexPath="M " + x1 +", " + y1 + " " +
+					"L " + x2 +", " + y2 + " " +
+					"L " + x3 +", " + y3 + " " +
+					"L " + x4 +", " + y4 + " " +
+					"L " + x5 +", " + y5 + " " +
+					"L " + x6 +", " + y6 + " z";
+
+       return (
                 <div className={"hex"}
 					 onClick={this.handleMouseDown}>
                     <svg>
                         <g >
-							<path fill={this.state.fillCol}
-                                  d="M26.585,48.184
-                                  c13.952-3.17,29.943-12.789,42.405-19.722C59.396-0.383,7.174,19.041,26.585,48.184z M66.588,20.034
-                                  c-1.545,3.623,12.297-4.666,13.224,0.056c-14.26,14.524-38.899,28.154-66.369,32.535c-0.845-5.802,8.882-5.864,8.801-11.252
-                                  C14.572,47.301,2.482,50.83,2.622,60.998c8.138-0.53,16.475-2.473,23.823-4.875c27.132-8.868,55.225-24.819,66.208-41.528
-                                  C86.805,12.543,72.602,16.763,66.588,20.034z M34.586,55.2C48.432,64.107,71.254,51.6,70.27,37.173
-                                  C58.396,43.193,46.026,48.943,34.586,55.2z"/>
+							<path
+								stroke={this.state.strokeCol}
+								fill={this.state.fillCol}
+								stroke-width={this.state.strokeW}
+								d={hexPath}/>
+							<ellipse fill={this.state.strokeCol}
+									 cx={this.props.r}
+									 cy={Math.sqrt(3)/2 * this.props.r}
+									 rx="2.0" ry="2.0"/>
 						</g>
                     </svg>
                 </div>

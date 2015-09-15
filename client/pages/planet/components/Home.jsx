@@ -59,14 +59,14 @@ var Component = React.createClass({
                 <h1 className="page-header">Planet Map</h1>
 
                 <div className={"container"}>
-					<Hex ref="top2"></Hex>
+					<Hex ref="top2" r="37"></Hex>
                     <Alien ref="top"></Alien>
                     <Planet ref="right"></Planet>
                     <Planet ref="bottom"></Planet>
                     <TextControl ref="left"></TextControl>
                     <Alien ref="right2"></Alien>
                     <TextControl ref="bottom2"></TextControl>
-                    <Hex ref="left2"></Hex>
+                    <Hex ref="left2" r="54"></Hex>
                 </div>
 				<Button
 					type="submit"
