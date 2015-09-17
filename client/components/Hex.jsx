@@ -5,7 +5,9 @@ var ClassNames = require('classnames');
 var View = React.createClass({
 
 	propTypes:{
-		r: React.PropTypes.string.isRequired
+		r: React.PropTypes.number.isRequired,
+        x: React.PropTypes.number.isRequired,
+        y: React.PropTypes.number.isRequired
 	},
 
     getDefaultProps: function () {
@@ -16,8 +18,8 @@ var View = React.createClass({
 
     getInitialState() {
         return {
-			strokeW:2,
-			fillCol: "#eeeeee",
+			strokeW:1,
+			fillCol: "#f3f3f3",
 			strokeCol: "#333333"
 		};
     },
@@ -59,20 +61,24 @@ var View = React.createClass({
 					"L " + x6 +", " + y6 + " z";
 
        return (
-                <div className={"hex"}
+                <div className={'hex'}
+                     style = {
+                        {
+                            left: this.props.x,
+                            top: this.props.y
+                        }
+                     }
 					 onClick={this.handleMouseDown}>
-                    <svg>
-                        <g >
-							<path
-								stroke={this.state.strokeCol}
-								fill={this.state.fillCol}
-								stroke-width={this.state.strokeW}
-								d={hexPath}/>
-							<ellipse fill={this.state.strokeCol}
-									 cx={this.props.r}
-									 cy={Math.sqrt(3)/2 * this.props.r}
-									 rx="2.0" ry="2.0"/>
-						</g>
+                    <svg >
+                        <path
+                            stroke={this.state.strokeCol}
+                            fill={this.state.fillCol}
+                            strokeWidth={this.state.strokeW}
+                            d={hexPath}/>
+                        <ellipse fill={this.state.strokeCol}
+                                 cx={this.props.r}
+                                 cy={Math.sqrt(3)/2 * this.props.r}
+                                 rx="1.5" ry="1.5"/>
                     </svg>
                 </div>
         )

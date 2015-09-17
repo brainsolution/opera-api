@@ -20,60 +20,31 @@ var Component = React.createClass({
 	},
 
     componentDidMount: function() {
-        var top = this.refs.top.getDOMNode();
-        var right = this.refs.right.getDOMNode();
-        var bottom = this.refs.bottom.getDOMNode();
-        var left = this.refs.left.getDOMNode();
-
-        var top2 = this.refs.top2.getDOMNode();
-        var right2 = this.refs.right2.getDOMNode();
-        var bottom2 = this.refs.bottom2.getDOMNode();
-        var left2 = this.refs.left2.getDOMNode();
-
-        var goRandom1 = Math.random()*400;
-        var goRandom2 = Math.random()*400;
-        var goRandom3 = Math.random()*400;
-        var goRandom4 = Math.random()*400;
-		var goRandom21 = Math.random()*400;
-		var goRandom22 = Math.random()*400;
-		var goRandom23 = Math.random()*400;
-		var goRandom24 = Math.random()*400;
-
-        var t = new TimelineMax({repeat:-1, yoyo:true});
-            t.to(top, .5, {y:"+="+goRandom1})
-            .to(right, .5, {x:"+="+goRandom2})
-            .to(bottom, .5, {y:"+="+goRandom3})
-            .to(left, .5, {x:"-="+goRandom4});
-
-        var t2 = new TimelineMax({repeat:-1, yoyo:true});
-            t2.to(top2, .5, {y:"-="+goRandom24})
-            .to(right2, .5, {x:"+="+goRandom23})
-            .to(bottom2, .5, {y:"+="+goRandom22})
-            .to(left2, .5, {x:"-="+goRandom21});
-
     },
 
     render: function () {
+
+        var rows = [];
+        for (var j = 0; j < 10; j++) {
+            for (var i = 0; i < 10; i++) {
+                if( j%2 === 0) {
+                    // even
+                    rows.push(<Hex key={j+'-'+i} x={96*i} y={28*j} r={32}/>);
+                } else {
+                    // odd
+                    rows.push(<Hex key={j+'-'+i} x={(96*i)+48} y={28*j} r={32}/>);
+                }
+            }
+        }
+
         return (
             <section>
-                <h1 className="page-header">Planet Map</h1>
-
-                <div className={"container"}>
-					<Hex ref="top2" r="37"></Hex>
-                    <Alien ref="top"></Alien>
-                    <Planet ref="right"></Planet>
-                    <Planet ref="bottom"></Planet>
-                    <TextControl ref="left"></TextControl>
-                    <Alien ref="right2"></Alien>
-                    <TextControl ref="bottom2"></TextControl>
-                    <Hex ref="left2" r="54"></Hex>
+                <div>
+                    <h1 className="page-header">Planet Map</h1>
+                    <div className={"container"}>
+                        {rows}
+                    </div>
                 </div>
-				<Button
-					type="submit"
-                    className={"righty"}
-					onClick={this.handleMouseDown}>
-					Oberon Four
-				</Button>
             </section>
         );
     }
