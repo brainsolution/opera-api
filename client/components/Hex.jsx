@@ -61,13 +61,10 @@ var View = React.createClass({
 					"L " + x6 +", " + y6 + " z";
 
        return (
-                <div className={'hex'}
-                     style = {
-                        {
-                            left: this.props.x,
-                            top: this.props.y
-                        }
-                     }
+                <svg className={'hex'}
+					 x = {this.props.x}
+					 y = {this.props.y}
+
 					 onClick={this.handleMouseDown}>
                     <svg >
                         <path
@@ -80,7 +77,7 @@ var View = React.createClass({
                                  cy={Math.sqrt(3)/2 * this.props.r}
                                  rx="1.5" ry="1.5"/>
                     </svg>
-                </div>
+                </svg>
         )
     }
 });
