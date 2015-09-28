@@ -8,6 +8,7 @@ var Alien = require('../../../components/Alien');
 var Hex = require('../../../components/Hex');
 var Spinner = require('../../../components/form/Spinner');
 var Actions = require('../Actions');
+var Slider = require('rc-slider');
 var Gsap = require('gsap');
 var LinkedState = React.addons.LinkedStateMixin;
 var Link = ReactRouter.Link;
@@ -45,6 +46,7 @@ var Component = React.createClass({
 
         return (
             <section>
+				<input type="text" value="32" />;
 				<svg xmlns="http://www.w3.org/2000/svg"
 					 width="1600" height="1200"
 					className={"map-container"}>
