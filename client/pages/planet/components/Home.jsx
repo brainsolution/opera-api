@@ -1,4 +1,5 @@
 var React = require('react/addons');
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 var ReactRouter = require('react-router');
 var ControlGroup = require('../../../components/form/ControlGroup');
 var TextControl = require('../../../components/form/TextControl');
@@ -16,42 +17,66 @@ var Navigation = ReactRouter.Navigation;
 
 var Component = React.createClass({
 
-	propTypes:{
-		r: React.PropTypes.number.isRequired
-	},
+    mixins:[PureRenderMixin],
 
-	getDefaultProps: function () {
+	getInitialState: function () {
 		return {
-			r: 32
+			r: 32,
+            secondsElapsed:0
 		};
 	},
 
-    componentDidMount: function() {
+    tick: function(){
+          this.setState({
+              secondsElapsed: this.state.secondsElapsed + 1,
+          });
+        var map = this.refs.mapDiv.getDOMNode();
+        TweenMax.to(map, 2, {scale: Math.random()*20, transformOrigin: "left top", ease: Power1.easeInOut});
+    },
+
+    componentDidMount: function(){
+      this.interval = setInterval(this.tick, 3000);
+    },
+
+    componentWillUnmount: function(){
+      clearInterval(this.interval);
+    },
+
+    handleChange: function(event) {
+        this.setState(
+            {
+                r: event.target.value
+            }
+        );
     },
 
     render: function () {
+        var r = this.state.r;
 
         var rows = [];
-        for (var j = 0; j < 40; j++) {
-            for (var i = 0; i < 80; i++) {
-                if( j%2 === 0) {
+        for (var x = 0; x < 40; x++) {
+            for (var y = 0; y < 40; y++) {
+                if( x%2 === 0) {
                     // even
-                    rows.push(<Hex key={j+'-'+i} x={3*this.props.r*i} y={7*this.props.r*j/8} r={this.props.r}/>);
+                    rows.push(<Hex key={x+'-'+y} x={3*r*y} y={7*r*x/8} r={r}/>);
                 } else {
                     // odd
-                    rows.push(<Hex key={j+'-'+i} x={(3*this.props.r*i)+3*this.props.r/2} y={7*this.props.r*j/8} r={this.props.r}/>);
+                    rows.push(<Hex key={x+'-'+y} x={(3*r*y)+3*r/2} y={7*r*x/8} r={r}/>);
                 }
             }
         }
 
         return (
             <section>
-				<input type="text" value="32" />;
-				<svg xmlns="http://www.w3.org/2000/svg"
-					 width="1600" height="1200"
-					className={"map-container"}>
-					{rows}
-				</svg>
+                <input onChange={this.handleChange} value={this.state.text} />
+                <span> {this.state.secondsElapsed} </span>
+                <div id="mapView" ref="mapDiv">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="1600" height="1200"
+                        className={"map-container"}>
+                        {rows}
+                    </svg>
+                </div>
             </section>
         );
     }
