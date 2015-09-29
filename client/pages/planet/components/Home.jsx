@@ -22,7 +22,8 @@ var Component = React.createClass({
 	getInitialState: function () {
 		return {
 			r: 32,
-            secondsElapsed:0
+            secondsElapsed:0,
+            s: 1
 		};
 	},
 
@@ -30,24 +31,43 @@ var Component = React.createClass({
           this.setState({
               secondsElapsed: this.state.secondsElapsed + 1,
           });
-        var map = this.refs.mapDiv.getDOMNode();
-        TweenMax.to(map, 2, {scale: Math.random()*20, transformOrigin: "left top", ease: Power1.easeInOut});
     },
 
     componentDidMount: function(){
-      this.interval = setInterval(this.tick, 3000);
+      this.interval = setInterval(this.tick, 5000);
     },
 
     componentWillUnmount: function(){
       clearInterval(this.interval);
     },
 
-    handleChange: function(event) {
+    changeRadius: function() {
+        if(this.state.r == 32){
+            this.setState(
+                {
+                    r: Math.random()*80
+                }
+            );
+        } else {
+            this.setState(
+                {
+                    r: 32
+                }
+            );
+        }
+    },
+
+    changeScale: function(e) {
         this.setState(
             {
-                r: event.target.value
+                s: e.target.value
             }
         );
+    },
+
+    gotoScale: function() {
+        var map = this.refs.mapDiv.getDOMNode();
+        TweenMax.to(map, 2, {scale: this.state.s, transformOrigin: "left top", ease: Power1.easeInOut});
     },
 
     render: function () {
@@ -68,7 +88,9 @@ var Component = React.createClass({
 
         return (
             <section>
-                <input onChange={this.handleChange} value={this.state.text} />
+                <button onClick={this.changeRadius}>Change Radius</button>
+                <button onClick={this.gotoScale}>Go to Scale</button>
+                <input onChange={this.changeScale} value={this.state.text} />
                 <span> {this.state.secondsElapsed} </span>
                 <div id="mapView" ref="mapDiv">
                     <svg xmlns="http://www.w3.org/2000/svg"
