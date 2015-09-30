@@ -20,7 +20,7 @@ var Component = React.createClass({
 
 	getInitialState: function () {
 		return {
-			r: 32,
+			r: 12,
             secondsElapsed:0,
             s: 1
 		};
@@ -58,7 +58,7 @@ var Component = React.createClass({
 
     zoomIn: function() {
         var newZoom = 1;
-        switch (this.state.s){
+        switch (this.state.s) {
             case(.3):{
                 newZoom = 1;
                 break;
@@ -87,7 +87,7 @@ var Component = React.createClass({
 
     zoomOut: function() {
         var newZoom = 1;
-        switch (this.state.s){
+        switch (this.state.s) {
             case(15):{
                 newZoom = 5;
                 break;
@@ -116,15 +116,15 @@ var Component = React.createClass({
 
     gotoScale: function() {
         var map = this.refs.mapDiv.getDOMNode();
-        TweenMax.to(map, 2, {scale: this.state.s, transformOrigin: "left top", ease: Power1.easeInOut});
+        TweenMax.to(map, 1, {scale: this.state.s, transformOrigin: "left top", ease: Power1.easeInOut});
     },
 
     render: function () {
         var r = this.state.r;
 
         var rows = [];
-        for (var x = 0; x < 40; x++) {
-            for (var y = 0; y < 40; y++) {
+        for (var x = 0; x < 160; x++) {
+            for (var y = 0; y < 80; y++) {
                 if( x%2 === 0) {
                     // even
                     rows.push(<Hex key={x+'-'+y} x={3*r*y} y={7*r*x/8} r={r}/>);
@@ -137,14 +137,17 @@ var Component = React.createClass({
 
         return (
             <section>
-                <div>
+                <div className="mapZoomControls">
                     <Button onClick={this.zoomOut}>-</Button>
-                    <br/>
                     <Button onClick={this.zoomIn}>+</Button>
+                </div>
+                <div className="mapControls panel panel-primary panel-fixed">
+                    <Button> fill paintbrush </Button>
+                    <Button> border paintbrush </Button>
                 </div>
                 <div id="mapView" ref="mapDiv">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                         width="1600" height="1200"
+                         width="100%" height="100%"
                         className={"map-container"}>
                         {rows}
                     </svg>

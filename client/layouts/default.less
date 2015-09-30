@@ -67,12 +67,7 @@ body {
     }
 }
 
-.map-container {
-  top:100px;
-  width:1600px;
-  height:1200px;
-  background-color: #f5f5f5;
-}
+
 
 .footer {
     margin-top: 50px;
@@ -104,6 +99,54 @@ body {
     }
 }
 
+.mapZoomControls {
+  position: fixed;
+  float: left;
+  z-index: 5000;
+  top:60px;
+  left:10px;
+}
+
+.mapControls {
+  position: fixed;
+  float: right;
+  z-index: 5001;
+  top:60px;
+  right:10px;
+  height:400px;
+  width:240px;
+  background-color: #F4f4f4;
+}
+
+#mapView {
+  margin: 0 auto;
+  width:2600px;
+  height:1200px;
+  z-index: 1000;
+  background-color: #336699;
+}
+
+#app-mount {
+  margin: 0 auto;
+  width:2600px;
+  height:1200px;
+  z-index: 1000;
+  background-color: #993366;
+}
+
+.map-container{
+  top:100px;
+  width:2400px !important;
+  height:1200px;
+  background-color: #339933;
+}
+
+.map-layout {
+  top:100px;
+  width:2600px;
+  height:1200px;
+  background-color: #f5ec92;
+}
 
 .spinnerContainer {
     display: inline-block;
