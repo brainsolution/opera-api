@@ -9,7 +9,6 @@ var Alien = require('../../../components/Alien');
 var Hex = require('../../../components/Hex');
 var Spinner = require('../../../components/form/Spinner');
 var Actions = require('../Actions');
-var Slider = require('rc-slider');
 var Gsap = require('gsap');
 var LinkedState = React.addons.LinkedStateMixin;
 var Link = ReactRouter.Link;
@@ -57,12 +56,62 @@ var Component = React.createClass({
         }
     },
 
-    changeScale: function(e) {
+    zoomIn: function() {
+        var newZoom = 1;
+        switch (this.state.s){
+            case(.3):{
+                newZoom = 1;
+                break;
+            }
+            case(1):{
+                newZoom = 5;
+                break;
+            }
+            case(5):{
+                newZoom = 15;
+                break;
+            }
+            case(15):{
+                newZoom = 15;
+                break;
+            }
+        }
+
         this.setState(
             {
-                s: e.target.value
+                s: newZoom
             }
         );
+        this.gotoScale();
+    },
+
+    zoomOut: function() {
+        var newZoom = 1;
+        switch (this.state.s){
+            case(15):{
+                newZoom = 5;
+                break;
+            }
+            case(5):{
+                newZoom = 1;
+                break;
+            }
+            case(1):{
+                newZoom = .3;
+                break;
+            }
+            case(.3):{
+                newZoom = .3;
+                break;
+            }
+        }
+
+        this.setState(
+            {
+                s: newZoom
+            }
+        );
+        this.gotoScale();
     },
 
     gotoScale: function() {
@@ -88,10 +137,11 @@ var Component = React.createClass({
 
         return (
             <section>
-                <button onClick={this.changeRadius}>Change Radius</button>
-                <button onClick={this.gotoScale}>Go to Scale</button>
-                <input onChange={this.changeScale} value={this.state.text} />
-                <span> {this.state.secondsElapsed} </span>
+                <div>
+                    <Button onClick={this.zoomOut}>-</Button>
+                    <br/>
+                    <Button onClick={this.zoomIn}>+</Button>
+                </div>
                 <div id="mapView" ref="mapDiv">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="1600" height="1200"
