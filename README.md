@@ -1,6 +1,6 @@
-# Aqua
+# Space Opera Node
 
-A website and user system starter based on aqua. 
+Based on aqua. 
 Implemented with Hapi, React and Flux.
 With the intent of swaping aurelia for flux as an experiment.
 
