@@ -2,7 +2,6 @@
 
 Based on aqua. 
 Implemented with Hapi, React and Flux.
-With the intent of swaping aurelia for flux as an experiment.
 
 [![Build Status](https://travis-ci.org/jedireza/aqua.svg?branch=master)](https://travis-ci.org/jedireza/aqua)
 [![Dependency Status](https://david-dm.org/jedireza/aqua.svg?style=flat)](https://david-dm.org/jedireza/aqua)
