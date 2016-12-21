@@ -1,6 +1,6 @@
 # Space Opera Node
 
-Based on aqua. 
+Based on [aqua](https://github.com/jedireza/aqua). 
 Implemented with Hapi, React and Flux.
 
 ## Technology
